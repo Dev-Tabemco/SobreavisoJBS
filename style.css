@@ -1,0 +1,232 @@
+/* Cores inspiradas no site da JBS Terminais */
+:root {
+    --azul-jbs: #003366;
+    --branco: #ffffff;
+    --cinza-claro: #f4f4f4;
+    --cinza-escuro: #333333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cinza-claro);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--azul-jbs);
+    color: var(--branco);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    max-width: 150px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.login-button {
+    background-color: var(--branco);
+    color: var(--azul-jbs);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-button:hover {
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background-color: var(--branco);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tablink {
+    padding: 10px 20px;
+    background-color: var(--cinza-claro);
+    border: none;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    color: var(--cinza-escuro);
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+.tablink.active {
+    background-color: var(--azul-jbs);
+    color: var(--branco);
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+.filtros {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filtros label {
+    font-weight: bold;
+}
+
+.filtros select, .filtros input {
+    padding: 8px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 4px;
+}
+
+.filtros button {
+    padding: 8px 16px;
+    background-color: var(--azul-jbs);
+    color: var(--branco);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filtros button:hover {
+    background-color: #002244;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid var(--cinza-claro);
+    text-align: left;
+}
+
+th {
+    background-color: var(--azul-jbs);
+    color: var(--branco);
+}
+
+tr:hover {
+    background-color: var(--cinza-claro);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 4px;
+}
+
+form button {
+    background-color: var(--azul-jbs);
+    color: var(--branco);
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #002244;
+}
+
+.login-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--azul-jbs);
+}
+
+.login-box {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: var(--azul-jbs);
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left; /* Alinha os rótulos à esquerda */
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--azul-jbs);
+    color: var(--branco);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #002244;
+}
+
+.logout-button {
+    background-color: #dc3545;
+    color: var(--branco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
