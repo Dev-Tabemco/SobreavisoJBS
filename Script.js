@@ -103,17 +103,6 @@ document.getElementById('formEscala').addEventListener('submit', function(event)
         alert('Já existe um colaborador de sobreaviso cadastrado para este dia.');
         return;
     }
-
-    // Verifica se o horário é válido para o dia selecionado
-    const dataObj = new Date(data + 'T00:00:00'); // Garante que a data seja interpretada corretamente
-    const diaSemana = dataObj.getDay(); // 0 = Domingo, 6 = Sábado
-    const horariosValidos = (diaSemana === 0 || diaSemana === 6) ? ["00:00 - 23:59"] : ["00:00 - 07:00", "18:00 - 23:59"];
-
-    if (!horariosValidos.includes(horario)) {
-        alert('Horário inválido para este dia. Dias úteis: 00:00 - 07:00 e 18:00 - 23:59. Fins de semana: 00:00 - 23:59.');
-        return;
-    }
-
     // Adiciona a nova escala
     escalas.push({ data, horario, funcionario });
     atualizarTabelaEscalas();
