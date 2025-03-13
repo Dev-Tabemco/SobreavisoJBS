@@ -8,6 +8,9 @@ const CREDENCIAIS_TI = { username: "ti", password: "ti123" };
 // Configurações do JSONBin.io
 const BIN_ID = '67d2c6f58960c979a570bc41'; // Substitua pelo seu Bin ID
 const API_KEY = '$2a$10$bXlzG3SYavPHAoqlvF3mfuerInkZexiCmpl5SfXSOAezIdgXX1vrq'; // Substitua pela sua API Key
+
+// URL da API com proxy
+const PROXY_URL = 'https://cors-anywhere.herokuapp.com/'; // Serviço de proxy
 const BASE_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
 
 const headers = {
@@ -18,7 +21,7 @@ const headers = {
 // Função para buscar dados do JSONBin.io
 async function fetchData() {
     try {
-        const response = await fetch(BASE_URL, { headers });
+        const response = await fetch(PROXY_URL + BASE_URL, { headers });
         const data = await response.json();
         funcionarios = data.record.funcionarios || [];
         escalas = data.record.escalas || [];
@@ -33,7 +36,7 @@ async function fetchData() {
 async function updateData() {
     try {
         const data = { funcionarios, escalas };
-        const response = await fetch(BASE_URL, {
+        const response = await fetch(PROXY_URL + BASE_URL, {
             method: 'PUT',
             headers,
             body: JSON.stringify(data),
